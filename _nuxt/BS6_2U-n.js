@@ -1,0 +1,1 @@
+const t={welcome:{t:0,b:{t:2,i:[{t:3}],s:"Welcome"}},Spanish:{t:0,b:{t:2,i:[{t:3}],s:"Spanish"}},English:{t:0,b:{t:2,i:[{t:3}],s:"English"}},Home:{t:0,b:{t:2,i:[{t:3}],s:"Home"}},Projects:{t:0,b:{t:2,i:[{t:3}],s:"Projects"}},Skills:{t:0,b:{t:2,i:[{t:3}],s:"Skills"}},Contact:{t:0,b:{t:2,i:[{t:3}],s:"Contact"}}};export{t as default};
