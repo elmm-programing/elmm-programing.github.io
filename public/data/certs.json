@@ -1,0 +1,313 @@
+{
+  "object": "list",
+  "results": [
+    {
+      "object": "page",
+      "id": "2ee59804-e276-8146-8906-cb9c0b7e168e",
+      "created_time": "2026-01-20T23:38:00.000Z",
+      "last_edited_time": "2026-01-20T23:38:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "4e656427-bac5-425d-954e-9ce7354b3eec"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "4e656427-bac5-425d-954e-9ce7354b3eec"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2ee59804-e276-8192-8de9-d46b1eb92b80"
+      },
+      "archived": false,
+      "in_trash": false,
+      "is_locked": false,
+      "properties": {
+        "Provider": {
+          "id": "%40Mzm",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Zero To Mastery Academy",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Zero To Mastery Academy",
+              "href": null
+            }
+          ]
+        },
+        "URL": {
+          "id": "sFk%3D",
+          "type": "url",
+          "url": "https://www.linkedin.com/in/edwin-levinson-mej%C3%ADa-marcelino-738746201/details/certifications/1714874786257/single-media-viewer?type=DOCUMENT&profileId=ACoAADOLlJwBmA5l5Y_dZv5lelB-GrxfOFlyIZk"
+        },
+        "Achievement": {
+          "id": "w%3B%3Ed",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Algorithms & Data Structures",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Algorithms & Data Structures",
+              "href": null
+            }
+          ]
+        },
+        "Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Master the Coding Interview",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Master the Coding Interview",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Master-the-Coding-Interview-2ee59804e27681468906cb9c0b7e168e",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "2ee59804-e276-815a-ab91-e823cf7479c1",
+      "created_time": "2026-01-20T23:38:00.000Z",
+      "last_edited_time": "2026-01-20T23:38:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "4e656427-bac5-425d-954e-9ce7354b3eec"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "4e656427-bac5-425d-954e-9ce7354b3eec"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2ee59804-e276-8192-8de9-d46b1eb92b80"
+      },
+      "archived": false,
+      "in_trash": false,
+      "is_locked": false,
+      "properties": {
+        "Provider": {
+          "id": "%40Mzm",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "HackerRank",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "HackerRank",
+              "href": null
+            }
+          ]
+        },
+        "URL": {
+          "id": "sFk%3D",
+          "type": "url",
+          "url": "https://www.hackerrank.com/certificates/1c375d187eeb"
+        },
+        "Achievement": {
+          "id": "w%3B%3Ed",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Intermediate JavaScript & SQL",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Intermediate JavaScript & SQL",
+              "href": null
+            }
+          ]
+        },
+        "Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "HackerRank Certified",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "HackerRank Certified",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/HackerRank-Certified-2ee59804e276815aab91e823cf7479c1",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "2ee59804-e276-81c2-8369-fd4b2cc0c215",
+      "created_time": "2026-01-20T23:38:00.000Z",
+      "last_edited_time": "2026-01-20T23:38:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "4e656427-bac5-425d-954e-9ce7354b3eec"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "4e656427-bac5-425d-954e-9ce7354b3eec"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2ee59804-e276-8192-8de9-d46b1eb92b80"
+      },
+      "archived": false,
+      "in_trash": false,
+      "is_locked": false,
+      "properties": {
+        "Provider": {
+          "id": "%40Mzm",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Udemy",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Udemy",
+              "href": null
+            }
+          ]
+        },
+        "URL": {
+          "id": "sFk%3D",
+          "type": "url",
+          "url": "https://www.udemy.com/certificate/UC-xxxxx/"
+        },
+        "Achievement": {
+          "id": "w%3B%3Ed",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Top 1% completion",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Top 1% completion",
+              "href": null
+            }
+          ]
+        },
+        "Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "JavaScript Advanced Concepts",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "JavaScript Advanced Concepts",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/JavaScript-Advanced-Concepts-2ee59804e27681c28369fd4b2cc0c215",
+      "public_url": null
+    }
+  ],
+  "next_cursor": null,
+  "has_more": false,
+  "type": "page_or_database",
+  "page_or_database": {},
+  "request_id": "80a67c70-c5db-4b9b-9611-ad9262821bfc"
+}

@@ -1,0 +1,346 @@
+{
+  "object": "list",
+  "results": [
+    {
+      "object": "page",
+      "id": "2ee59804-e276-8140-ad9f-f641d2191eb2",
+      "created_time": "2026-01-20T23:40:00.000Z",
+      "last_edited_time": "2026-01-20T23:40:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "4e656427-bac5-425d-954e-9ce7354b3eec"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "4e656427-bac5-425d-954e-9ce7354b3eec"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2ee59804-e276-8100-9537-ec49b48f594b"
+      },
+      "archived": false,
+      "in_trash": false,
+      "is_locked": false,
+      "properties": {
+        "Description": {
+          "id": "GZXe",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Refactorización crítica del Sistema Nacional de Gestión Financiera.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Refactorización crítica del Sistema Nacional de Gestión Financiera.",
+              "href": null
+            }
+          ]
+        },
+        "Impact": {
+          "id": "ThJb",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Incremento del 30% en eficiencia de desarrollo y despliegues con cero tiempo de inactividad.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Incremento del 30% en eficiencia de desarrollo y despliegues con cero tiempo de inactividad.",
+              "href": null
+            }
+          ]
+        },
+        "Challenge": {
+          "id": "%5BIAj",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Modernizar un sistema financiero monolítico obsoleto manteniendo la integridad de datos transaccionales masivos.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Modernizar un sistema financiero monolítico obsoleto manteniendo la integridad de datos transaccionales masivos.",
+              "href": null
+            }
+          ]
+        },
+        "Tags": {
+          "id": "kwLX",
+          "type": "multi_select",
+          "multi_select": [
+            {
+              "id": "d6b27ba4-fd5e-498c-9c4f-dea58d4fdcb5",
+              "name": "Vue 3",
+              "color": "purple"
+            },
+            {
+              "id": "1de9a682-5a22-4e10-8140-8f862074a1fb",
+              "name": "Nuxt 3",
+              "color": "default"
+            },
+            {
+              "id": "bd4a080a-bcaa-41bc-80ef-bfd758f2eafc",
+              "name": "Tailwind CSS",
+              "color": "pink"
+            }
+          ]
+        },
+        "Solution": {
+          "id": "vsQ_",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Arquitectura modular con Nuxt 3 para gestión de estado global y optimización de renderizado.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Arquitectura modular con Nuxt 3 para gestión de estado global y optimización de renderizado.",
+              "href": null
+            }
+          ]
+        },
+        "Image": {
+          "id": "%7DiQ%3C",
+          "type": "url",
+          "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBbf1EbINAvQU3nbBTl7gp0K0Q73SzGjDhlD8GnJs0PBEXpdv_TgxBA8afL4Pa8WeFjdB0lR1u_VpHTQxTHDmTXDiet6C8FxUXAyatNVgDO_rBACGu6RfNjqRLcpug8-fZloWj-dyXEFEZVJSkD1oA3pklYgeWEvhkbGetTTVNDNevNi9qgqK-SQfUQnSFUc1RUeXmUwg6v4MJlFJMnnRQwQG1N7hy9NJ1WHJT4aJaCNvdD2u7k_JlHHVFB4NjCSPGnxmaEXj-ICArQ"
+        },
+        "Title": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Modernización SIGEF 2",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Modernización SIGEF 2",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Modernizaci-n-SIGEF-2-2ee59804e2768140ad9ff641d2191eb2",
+      "public_url": null
+    },
+    {
+      "object": "page",
+      "id": "2ee59804-e276-8179-85e5-c68128542d50",
+      "created_time": "2026-01-20T23:40:00.000Z",
+      "last_edited_time": "2026-01-20T23:40:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "4e656427-bac5-425d-954e-9ce7354b3eec"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "4e656427-bac5-425d-954e-9ce7354b3eec"
+      },
+      "cover": null,
+      "icon": null,
+      "parent": {
+        "type": "database_id",
+        "database_id": "2ee59804-e276-8100-9537-ec49b48f594b"
+      },
+      "archived": false,
+      "in_trash": false,
+      "is_locked": false,
+      "properties": {
+        "Description": {
+          "id": "GZXe",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Sistema de diseño unificado para suite de productos financieros SaaS.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Sistema de diseño unificado para suite de productos financieros SaaS.",
+              "href": null
+            }
+          ]
+        },
+        "Impact": {
+          "id": "ThJb",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Reducción del 50% en tiempo de prototipado y consistencia visual en toda la plataforma SaaS.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Reducción del 50% en tiempo de prototipado y consistencia visual en toda la plataforma SaaS.",
+              "href": null
+            }
+          ]
+        },
+        "Challenge": {
+          "id": "%5BIAj",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Inconsistencia visual y de UX a través de múltiples módulos financieros independientes.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Inconsistencia visual y de UX a través de múltiples módulos financieros independientes.",
+              "href": null
+            }
+          ]
+        },
+        "Tags": {
+          "id": "kwLX",
+          "type": "multi_select",
+          "multi_select": [
+            {
+              "id": "7e7bea45-6d3c-4d96-9b05-38f71ae1ca73",
+              "name": "PrimeVue",
+              "color": "brown"
+            },
+            {
+              "id": "64b462dc-7afe-46d4-af76-d2d9bfa84fa2",
+              "name": "Tailwind",
+              "color": "gray"
+            },
+            {
+              "id": "15c0b4e9-debc-4278-80e4-a70bf458d534",
+              "name": "SaaS",
+              "color": "blue"
+            }
+          ]
+        },
+        "Solution": {
+          "id": "vsQ_",
+          "type": "rich_text",
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Creación de librería atómica basada en PrimeVue extendida con tokens de diseño en Tailwind.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Creación de librería atómica basada en PrimeVue extendida con tokens de diseño en Tailwind.",
+              "href": null
+            }
+          ]
+        },
+        "Image": {
+          "id": "%7DiQ%3C",
+          "type": "url",
+          "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAk5rXw8IsqkksrPsEMV-78gts9NBwg0kA2RZULVIj0Jq23SOYbcARI0PFgCkMm2_Eq5T8wLep6858_b5iIiKzy7e6dPqAdaxjWIpxTxvTecWOy_-rGJqdTTuFXHkvu9-V54YQ5GVtbTEVwe5Nsfa6RRYO1VEEgv4hALlsFMJ-fTadXu0K98n1kN4hTeEGjc8_8mqMWQmRwa7p7jZd1WGC9kS7dI_M49pOUU_IDUQaWqFw9UGo51lyTnDh3WW4cJIc2iu-omdxEhlZK"
+        },
+        "Title": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Librería de Componentes UI",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Librería de Componentes UI",
+              "href": null
+            }
+          ]
+        }
+      },
+      "url": "https://www.notion.so/Librer-a-de-Componentes-UI-2ee59804e276817985e5c68128542d50",
+      "public_url": null
+    }
+  ],
+  "next_cursor": null,
+  "has_more": false,
+  "type": "page_or_database",
+  "page_or_database": {},
+  "request_id": "630ef16a-e401-45eb-8297-f4988df7719d"
+}
