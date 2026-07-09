@@ -1,49 +1,108 @@
 <template>
-  <nav class="fixed top-0 w-full z-50 glass-nav border-b border-gray-200 dark:border-gray-800">
+  <nav :class="['fixed top-0 w-full z-50 border-b transition-colors duration-200',
+    scrolled
+      ? 'bg-bg-light/90 dark:bg-bg-dark/90 backdrop-blur-md border-border-light dark:border-border-dark'
+      : 'bg-transparent border-transparent']">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
-        <!-- Logo -->
-        <div class="flex-shrink-0 flex items-center gap-2">
-          <div class="w-8 h-8 rounded bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white font-bold">
+        <div class="flex-shrink-0 flex items-center gap-2 font-mono">
+          <div class="w-8 h-8 rounded border-2 border-primary flex items-center justify-center text-primary font-bold text-sm">
             E
           </div>
           <span class="font-bold text-xl tracking-tight dark:text-white">Edwin Levinson</span>
         </div>
 
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="#work" class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Casos de Estudio</a>
-          <a href="#skills" class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Habilidades</a>
-          <a href="#certifications" class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Certificaciones</a>
-          <a href="#about" class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Sobre mí</a>
-          <a href="#contact" class="text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contacto</a>
+        <div class="hidden md:flex items-center gap-6">
+          <a v-for="link in links" :key="link.id"
+            :href="'#' + link.id"
+            :class="['font-mono text-sm transition-colors',
+              activeSection === link.id ? 'text-primary border-b-2 border-primary' : 'text-ink-dark dark:text-ink-muted hover:text-primary']">
+            {{ link.label }}
+          </a>
+          <button @click="toggleTheme" type="button"
+            class="font-mono text-sm text-ink-dark dark:text-ink-muted hover:text-primary transition-colors px-2"
+            :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
+            {{ isDark ? '☀' : '☾' }}
+          </button>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-          <button @click="isMenuOpen = !isMenuOpen" type="button" class="text-gray-300 hover:text-white">
-            <Menu class="w-8 h-8" />
+        <div class="md:hidden flex items-center gap-3">
+          <button @click="toggleTheme" type="button"
+            class="font-mono text-sm text-ink-dark dark:text-ink-muted hover:text-primary transition-colors"
+            :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
+            {{ isDark ? '☀' : '☾' }}
+          </button>
+          <button @click="isMenuOpen = !isMenuOpen" type="button" class="text-ink-dark dark:text-ink-muted hover:text-primary">
+            <Menu class="w-7 h-7" />
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Mobile Menu Dropdown -->
-    <div v-show="isMenuOpen" class="md:hidden glass-nav border-b border-gray-800">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
-        <a href="#work" @click="isMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Casos de Estudio</a>
-        <a href="#skills" @click="isMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Habilidades</a>
-        <a href="#certifications" @click="isMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Certificaciones</a>
-        <a href="#about" @click="isMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Sobre mí</a>
-        <a href="#contact" @click="isMenuOpen = false" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Contacto</a>
+    <div v-show="isMenuOpen" class="md:hidden bg-bg-light/95 dark:bg-bg-dark/95 backdrop-blur-md border-b border-border-light dark:border-border-dark">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
+        <a v-for="link in links" :key="link.id"
+          :href="'#' + link.id"
+          @click="isMenuOpen = false"
+          :class="['block px-3 py-2 rounded-md font-mono text-base',
+            activeSection === link.id ? 'text-primary bg-primary/10' : 'text-ink-dark dark:text-ink-muted hover:text-primary hover:bg-primary/5']">
+          {{ link.label }}
+        </a>
       </div>
     </div>
   </nav>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { Menu } from 'lucide-vue-next';
 
+const links = [
+  { id: 'work', label: 'case-studies' },
+  { id: 'skills', label: 'skills' },
+  { id: 'certifications', label: 'certs' },
+  { id: 'about', label: 'about' },
+  { id: 'contact', label: 'contact' },
+];
+
 const isMenuOpen = ref(false);
+const isDark = ref(true);
+const scrolled = ref(false);
+const activeSection = ref<string | null>(null);
+
+let observer: IntersectionObserver | null = null;
+
+function toggleTheme() {
+  isDark.value = !isDark.value;
+  document.documentElement.classList.toggle('dark', isDark.value);
+  localStorage.setItem('theme', isDark.value ? 'dark' : 'light');
+}
+
+function onScroll() {
+  scrolled.value = window.scrollY > 24;
+}
+
+onMounted(() => {
+  isDark.value = document.documentElement.classList.contains('dark');
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries.filter(e => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+      activeSection.value = visible[0]?.target.id ?? null;
+    },
+    { rootMargin: '-40% 0px -55% 0px', threshold: [0, 0.1, 0.5] }
+  );
+  links.forEach(l => {
+    const el = document.getElementById(l.id);
+    if (el) observer!.observe(el);
+  });
+});
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll);
+  observer?.disconnect();
+});
 </script>
