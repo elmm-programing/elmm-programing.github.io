@@ -1,61 +1,103 @@
 <template>
-  <section class="py-20 bg-background-light dark:bg-background-dark relative z-10" id="certifications">
+  <section class="py-20 bg-bg-light dark:bg-bg-dark relative z-10" id="certifications">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-12">
         <h2 class="text-3xl font-bold tracking-tight dark:text-white flex items-center gap-3">
-          <span class="w-2 h-8 bg-purple-600 rounded-full"></span>
-          Certificaciones y Logros
+          <span class="w-2 h-8 bg-primary rounded-full"></span>
+          Certifications &amp; Achievements
         </h2>
       </div>
 
-      <div v-if="pending" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div v-for="i in 3" :key="i" class="bg-white dark:bg-surface-dark rounded-xl p-8 border border-gray-100 dark:border-gray-800 animate-pulse">
-          <div class="w-20 h-20 rounded-full bg-gray-200 dark:bg-gray-800 mb-6 mx-auto"></div>
-          <div class="h-6 w-3/4 bg-gray-200 dark:bg-gray-800 rounded mb-4 mx-auto"></div>
-          <div class="h-4 w-full bg-gray-200 dark:bg-gray-800 rounded mb-4"></div>
-          <div class="h-8 w-24 bg-gray-200 dark:bg-gray-800 rounded-full mx-auto"></div>
+      <div v-if="pending" class="space-y-8">
+        <div v-for="i in 4" :key="i" class="border border-border-light dark:border-border-dark p-4 animate-pulse">
+          <div class="h-5 w-3/4 bg-border-light dark:bg-border-dark rounded mb-2"></div>
+          <div class="h-4 w-full bg-border-light dark:bg-border-dark rounded"></div>
         </div>
       </div>
 
-      <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <article v-for="cert in certifications" :key="cert.name"
-          class="bg-white dark:bg-surface-dark p-6 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-primary/50 transition-all hover:shadow-lg h-full flex flex-col items-center text-center group">
-          <div class="w-20 h-20 rounded-full bg-purple-600/10 text-purple-600 dark:text-purple-500 flex items-center justify-center mb-6 group-hover:bg-purple-600/20 transition-colors shadow-sm">
-            <BadgeCheck class="w-10 h-10" />
+      <div v-else class="space-y-12">
+        <div v-if="grouped.skillValidations.length">
+          <h3 class="font-mono text-sm text-primary mb-4">[skill-validations]</h3>
+          <div class="space-y-3">
+            <div v-for="(cert, i) in grouped.skillValidations" :key="cert.name"
+              class="border border-border-light dark:border-border-dark p-4 hover:border-primary/50 transition-colors flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+              <span class="font-mono text-xs text-ink-muted w-8">{{ String(i + 1).padStart(2, '0') }}</span>
+              <div class="flex-1">
+                <div class="font-bold text-ink dark:text-white">{{ cert.name }}</div>
+                <div class="text-sm text-ink-muted dark:text-ink-muted">{{ cert.achievement }}</div>
+              </div>
+              <span class="font-mono text-xs px-2 py-0.5 border border-primary/40 text-primary self-start sm:self-center">{{ cert.provider }}</span>
+              <a v-if="cert.url" :href="cert.url" target="_blank"
+                class="font-mono text-sm text-primary hover:text-primary-hover transition-colors whitespace-nowrap">→ view</a>
+            </div>
           </div>
-          <h4 class="font-bold text-gray-900 dark:text-white text-lg mb-2">{{ cert.name }}</h4>
-          <p class="text-text-secondary text-sm mb-6">{{ cert.achievement }}</p>
-          
-          <div class="mt-auto flex flex-col items-center gap-4">
-            <span class="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs font-semibold text-text-secondary rounded-full">{{ cert.provider }}</span>
-            <a v-if="cert.url" :href="cert.url" target="_blank" 
-               class="text-sm font-bold text-primary hover:text-primary-hover transition-colors flex items-center gap-1 group/link">
-              Ver Certificado
-              <ExternalLink class="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform" />
-            </a>
+        </div>
+
+        <div v-if="grouped.courseCompletions.length">
+          <h3 class="font-mono text-sm text-accent mb-4">[course-completions]</h3>
+          <div class="space-y-3">
+            <div v-for="(cert, i) in grouped.courseCompletions" :key="cert.name"
+              class="border border-border-light dark:border-border-dark p-4 hover:border-accent/50 transition-colors flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+              <span class="font-mono text-xs text-ink-muted w-8">{{ String(i + 1).padStart(2, '0') }}</span>
+              <div class="flex-1">
+                <div class="font-bold text-ink dark:text-white">{{ cert.name }}</div>
+                <div class="text-sm text-ink-muted dark:text-ink-muted">{{ cert.achievement }}</div>
+              </div>
+              <span class="font-mono text-xs px-2 py-0.5 border border-accent/40 text-accent self-start sm:self-center">{{ cert.provider }}</span>
+              <a v-if="cert.url" :href="cert.url" target="_blank"
+                class="font-mono text-sm text-accent hover:opacity-80 transition-opacity whitespace-nowrap">→ view</a>
+            </div>
           </div>
-        </article>
+        </div>
+
+        <div v-if="grouped.other.length">
+          <h3 class="font-mono text-sm text-ink-muted mb-4">[other]</h3>
+          <div class="space-y-3">
+            <div v-for="(cert, i) in grouped.other" :key="cert.name"
+              class="border border-border-light dark:border-border-dark p-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+              <span class="font-mono text-xs text-ink-muted w-8">{{ String(i + 1).padStart(2, '0') }}</span>
+              <div class="flex-1">
+                <div class="font-bold text-ink dark:text-white">{{ cert.name }}</div>
+                <div class="text-sm text-ink-muted dark:text-ink-muted">{{ cert.achievement }}</div>
+              </div>
+              <a v-if="cert.url" :href="cert.url" target="_blank"
+                class="font-mono text-sm text-primary hover:text-primary-hover transition-colors whitespace-nowrap">→ view</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import { NotionService } from '../utils/NotionService';
-import { BadgeCheck, ExternalLink } from 'lucide-vue-next';
+import { ref, computed, onMounted } from 'vue';
+import { PortfolioService } from '../utils/PortfolioService';
 
 const certifications = ref<any[]>([]);
 const pending = ref(true);
 
 onMounted(async () => {
-    try {
-        const notionService = new NotionService();
-        certifications.value = await notionService.getCertifications();
-    } catch (e) {
-        console.error(e);
-    } finally {
-        pending.value = false;
-    }
+  try {
+    const portfolioService = new PortfolioService();
+    certifications.value = await portfolioService.getCertifications();
+  } catch (e) {
+    console.error(e);
+  } finally {
+    pending.value = false;
+  }
+});
+
+const grouped = computed(() => {
+  const skillValidations: any[] = [];
+  const courseCompletions: any[] = [];
+  const other: any[] = [];
+  for (const cert of certifications.value) {
+    const p = (cert.provider || '').toLowerCase();
+    if (p.includes('hackerrank')) skillValidations.push(cert);
+    else if (p.includes('zero to mastery')) courseCompletions.push(cert);
+    else other.push(cert);
+  }
+  return { skillValidations, courseCompletions, other };
 });
 </script>
