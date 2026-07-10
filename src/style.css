@@ -12,14 +12,20 @@
   --color-ink-muted: oklch(0.72 0.02 160);
   --color-ink-dark: oklch(0.15 0.01 160);
   --color-ink-muted-dark: oklch(0.45 0.02 160);
-  --color-primary: oklch(0.78 0.18 145);
-  --color-primary-hover: oklch(0.84 0.18 145);
-  --color-accent: oklch(0.82 0.15 75);
+  --color-primary: oklch(0.50 0.15 145);
+  --color-primary-hover: oklch(0.42 0.15 145);
+  --color-accent: oklch(0.55 0.14 75);
   --color-border-dark: oklch(0.30 0.02 160);
   --color-border-light: oklch(0.88 0.01 160);
   --font-sans: "Sora", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   --shadow-glow: 0 0 20px -5px oklch(0.78 0.18 145 / 0.3);
+}
+
+.dark {
+  --color-primary: oklch(0.78 0.18 145);
+  --color-primary-hover: oklch(0.84 0.18 145);
+  --color-accent: oklch(0.82 0.15 75);
 }
 
 @keyframes cursor-blink {
