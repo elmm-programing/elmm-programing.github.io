@@ -37,12 +37,6 @@ jobs:
 
       - name: Build
         run: pnpm run build
-        env:
-          VITE_NOTION_TOKEN: ${{ secrets.VITE_NOTION_TOKEN }}
-          VITE_PORTFOLIO_PAGE_ID: ${{ secrets.VITE_PORTFOLIO_PAGE_ID }}
-          VITE_NOTION_DB_SKILLS_ID: ${{ secrets.VITE_NOTION_DB_SKILLS_ID }}
-          VITE_NOTION_DB_PROJECTS_ID: ${{ secrets.VITE_NOTION_DB_PROJECTS_ID }}
-          VITE_NOTION_DB_CERTS_ID: ${{ secrets.VITE_NOTION_DB_CERTS_ID }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
