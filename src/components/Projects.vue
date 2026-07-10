@@ -4,10 +4,10 @@
       <div class="mb-16">
         <h2 class="text-3xl font-bold tracking-tight dark:text-white flex items-center gap-3">
           <span class="w-2 h-8 bg-primary rounded-full"></span>
-          Selected Case Studies
+          {{ $t('projects.title') }}
         </h2>
         <p class="mt-4 text-lg text-ink-muted dark:text-ink-muted max-w-2xl">
-          Deep diving into the technical challenges and strategic impact of each project.
+          {{ $t('projects.subtitle') }}
         </p>
       </div>
 
@@ -25,7 +25,7 @@
       <div v-else class="space-y-8">
         <article v-for="(project, index) in projects" :key="project.title"
           class="border-l-2 border-primary/40 border-y border-r border-border-light dark:border-border-dark p-6 sm:p-8 lg:p-10 hover:border-primary/60 transition-colors">
-          <div class="font-mono text-sm text-primary mb-3">[case-study {{ String(index + 1).padStart(2, '0') }}]</div>
+          <div class="font-mono text-sm text-primary mb-3">[{{ $t('projects.caseStudyPrefix') }} {{ String(index + 1).padStart(2, '0') }}]</div>
 
           <div class="flex flex-wrap gap-2 mb-4">
             <span v-for="tag in project.tags" :key="tag"
@@ -44,7 +44,7 @@
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-border-light dark:border-border-dark">
             <div>
               <h4 class="font-mono text-xs text-primary mb-2 flex items-center gap-1">
-                <TriangleAlert class="w-3.5 h-3.5" /> &gt; challenge
+                <TriangleAlert class="w-3.5 h-3.5" /> &gt; {{ $t('projects.challenge') }}
               </h4>
               <p class="text-sm text-ink-muted dark:text-ink-muted leading-relaxed">
                 {{ project.challenge }}
@@ -52,7 +52,7 @@
             </div>
             <div>
               <h4 class="font-mono text-xs text-primary mb-2 flex items-center gap-1">
-                <Lightbulb class="w-3.5 h-3.5" /> &gt; solution
+                <Lightbulb class="w-3.5 h-3.5" /> &gt; {{ $t('projects.solution') }}
               </h4>
               <p class="text-sm text-ink-muted dark:text-ink-muted leading-relaxed">
                 {{ project.solution }}
@@ -60,7 +60,7 @@
             </div>
             <div>
               <h4 class="font-mono text-xs text-primary mb-2 flex items-center gap-1">
-                <TrendingUp class="w-3.5 h-3.5" /> &gt; impact
+                <TrendingUp class="w-3.5 h-3.5" /> &gt; {{ $t('projects.impact') }}
               </h4>
               <p class="text-sm text-ink-dark dark:text-ink leading-relaxed font-medium">
                 {{ project.impact }}
@@ -74,21 +74,27 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { PortfolioService } from '../utils/PortfolioService';
 import { TriangleAlert, Lightbulb, TrendingUp } from 'lucide-vue-next';
 
+const { locale } = useI18n();
 const projects = ref<any[]>([]);
 const pending = ref(true);
 
-onMounted(async () => {
+async function load() {
+  pending.value = true;
   try {
-    const portfolioService = new PortfolioService();
+    const portfolioService = new PortfolioService(locale.value);
     projects.value = await portfolioService.getProjects();
   } catch (e) {
     console.error(e);
   } finally {
     pending.value = false;
   }
-});
+}
+
+onMounted(load);
+watch(locale, load);
 </script>

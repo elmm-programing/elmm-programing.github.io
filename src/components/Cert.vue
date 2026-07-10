@@ -4,7 +4,7 @@
       <div class="mb-12">
         <h2 class="text-3xl font-bold tracking-tight dark:text-white flex items-center gap-3">
           <span class="w-2 h-8 bg-primary rounded-full"></span>
-          Certifications &amp; Achievements
+          {{ $t('certs.title') }}
         </h2>
       </div>
 
@@ -17,7 +17,7 @@
 
       <div v-else class="space-y-12">
         <div v-if="grouped.skillValidations.length">
-          <h3 class="font-mono text-sm text-primary mb-4">[skill-validations]</h3>
+          <h3 class="font-mono text-sm text-primary mb-4">[{{ $t('certs.skillValidations') }}]</h3>
           <div class="space-y-3">
             <div v-for="(cert, i) in grouped.skillValidations" :key="cert.name"
               class="border border-border-light dark:border-border-dark p-4 hover:border-primary/50 transition-colors flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
@@ -28,13 +28,13 @@
               </div>
               <span class="font-mono text-xs px-2 py-0.5 border border-primary/40 text-primary self-start sm:self-center">{{ cert.provider }}</span>
               <a v-if="cert.url" :href="cert.url" target="_blank"
-                class="font-mono text-sm text-primary hover:text-primary-hover transition-colors whitespace-nowrap">→ view</a>
+                class="font-mono text-sm text-primary hover:text-primary-hover transition-colors whitespace-nowrap">{{ $t('certs.view') }}</a>
             </div>
           </div>
         </div>
 
         <div v-if="grouped.courseCompletions.length">
-          <h3 class="font-mono text-sm text-accent mb-4">[course-completions]</h3>
+          <h3 class="font-mono text-sm text-accent mb-4">[{{ $t('certs.courseCompletions') }}]</h3>
           <div class="space-y-3">
             <div v-for="(cert, i) in grouped.courseCompletions" :key="cert.name"
               class="border border-border-light dark:border-border-dark p-4 hover:border-accent/50 transition-colors flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
@@ -45,7 +45,7 @@
               </div>
               <span class="font-mono text-xs px-2 py-0.5 border border-accent/40 text-accent self-start sm:self-center">{{ cert.provider }}</span>
               <a v-if="cert.url" :href="cert.url" target="_blank"
-                class="font-mono text-sm text-accent hover:opacity-80 transition-opacity whitespace-nowrap">→ view</a>
+                class="font-mono text-sm text-accent hover:opacity-80 transition-opacity whitespace-nowrap">{{ $t('certs.view') }}</a>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@
                 <div class="text-sm text-ink-muted dark:text-ink-muted">{{ cert.achievement }}</div>
               </div>
               <a v-if="cert.url" :href="cert.url" target="_blank"
-                class="font-mono text-sm text-primary hover:text-primary-hover transition-colors whitespace-nowrap">→ view</a>
+                class="font-mono text-sm text-primary hover:text-primary-hover transition-colors whitespace-nowrap">{{ $t('certs.view') }}</a>
             </div>
           </div>
         </div>
@@ -71,22 +71,28 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
+import { ref, computed, onMounted, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { PortfolioService } from '../utils/PortfolioService';
 
+const { locale } = useI18n();
 const certifications = ref<any[]>([]);
 const pending = ref(true);
 
-onMounted(async () => {
+async function load() {
+  pending.value = true;
   try {
-    const portfolioService = new PortfolioService();
+    const portfolioService = new PortfolioService(locale.value);
     certifications.value = await portfolioService.getCertifications();
   } catch (e) {
     console.error(e);
   } finally {
     pending.value = false;
   }
-});
+}
+
+onMounted(load);
+watch(locale, load);
 
 const grouped = computed(() => {
   const skillValidations: any[] = [];

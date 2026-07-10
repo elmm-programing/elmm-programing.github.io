@@ -1,0 +1,57 @@
+export default {
+  meta: {
+    title: "Edwin Levinson — Senior Full-Stack Developer",
+  },
+  nav: {
+    caseStudies: "case-studies",
+    skills: "skills",
+    certs: "certs",
+    about: "about",
+    contact: "contact",
+  },
+  hero: {
+    tagline: "Senior Full-Stack Developer | React · Vue · Next.js · Nuxt.js · Node.js · Go · Java | Remote LATAM",
+    headline: "I build scalable architectures and {accent}",
+    headlineAccent: "high-security financial systems",
+    subtitle: "Go, Node.js and Java backend specialist. 4+ years operating SIGEF 2 — the Dominican Republic's national financial-management platform — at 99.9% uptime under federal audit cadence.",
+    ctaCaseStudies: "$ view --case-studies",
+    ctaContact: "$ contact --me",
+  },
+  projects: {
+    title: "Selected Case Studies",
+    subtitle: "Deep diving into the technical challenges and strategic impact of each project.",
+    caseStudyPrefix: "case-study",
+    challenge: "challenge",
+    solution: "solution",
+    impact: "impact",
+  },
+  skills: {
+    title: "Technical Skills",
+  },
+  certs: {
+    title: "Certifications & Achievements",
+    skillValidations: "skill-validations",
+    courseCompletions: "course-completions",
+    view: "→ view",
+  },
+  about: {
+    headline: "More than code — I operate {break}high-reliability systems.",
+    body1: "I work on {strong} — the Dominican Republic's national financial-management platform at the Ministerio de Hacienda — designing Go and Node.js microservices, modeling relational and NoSQL data, and operating the platform in production under federal audit cadence at {primary}.",
+    body2: "Async-first remote operator in UTC−4 with full overlap to LATAM and US business hours. I lead code reviews and mentor mid/junior engineers on Go patterns, concurrency, and maintainable service design.",
+    reliability: "reliability",
+    reliabilityTitle: "Federal Audit-Grade",
+    reliabilityDesc: "99.9% uptime on SIGEF 2 state financial transactions under federal audit windows.",
+    stack: "stack",
+    stackTitle: "Backend-First Full-Stack",
+    stackDesc: "Go + Node.js microservices with Swagger/OpenAPI contracts; React and Vue on the frontend.",
+    mentorship: "mentorship",
+    mentorshipTitle: "Mentor & Code-Review Lead",
+    mentorshipDesc: "Own PR standards and mentor mid/junior engineers on Go patterns, concurrency, and maintainable design.",
+    uptime: "99.9% uptime",
+  },
+  footer: {
+    headline: "Ready to scale your product?",
+    body: "Currently available for consulting and technical leadership roles. Let's talk about how I can bring value to your team.",
+    rights: "All rights reserved.",
+  },
+};

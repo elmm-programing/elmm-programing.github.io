@@ -1,0 +1,57 @@
+export default {
+  meta: {
+    title: "Edwin Levinson — Desarrollador Full-Stack Senior",
+  },
+  nav: {
+    caseStudies: "casos-de-estudio",
+    skills: "habilidades",
+    certs: "certificaciones",
+    about: "sobre-mí",
+    contact: "contacto",
+  },
+  hero: {
+    tagline: "Desarrollador Full-Stack Senior | React · Vue · Next.js · Nuxt.js · Node.js · Go · Java | Remoto LATAM",
+    headline: "Construyo arquitecturas escalables y {accent}",
+    headlineAccent: "sistemas financieros de alta seguridad",
+    subtitle: "Especialista backend en Go, Node.js y Java. +4 años operando SIGEF 2 — la plataforma nacional de gestión financiera de República Dominicana — al 99.9% de disponibilidad bajo cadencia de auditoría federal.",
+    ctaCaseStudies: "$ ver --casos-de-estudio",
+    ctaContact: "$ contactar --me",
+  },
+  projects: {
+    title: "Casos de Estudio Seleccionados",
+    subtitle: "Profundizando en los desafíos técnicos y el impacto estratégico de cada proyecto.",
+    caseStudyPrefix: "caso-de-estudio",
+    challenge: "desafío",
+    solution: "solución",
+    impact: "impacto",
+  },
+  skills: {
+    title: "Habilidades Técnicas",
+  },
+  certs: {
+    title: "Certificaciones y Logros",
+    skillValidations: "validaciones-de-habilidades",
+    courseCompletions: "finalización-de-cursos",
+    view: "→ ver",
+  },
+  about: {
+    headline: "Más que código — opero {break}sistemas de alta confiabilidad.",
+    body1: "Trabajo en {strong} — la plataforma nacional de gestión financiera de República Dominicana en el Ministerio de Hacienda — diseñando microservicios en Go y Node.js, modelando datos relacionales y NoSQL, y operando la plataforma en producción bajo cadencia de auditoría federal al {primary}.",
+    body2: "Operador remoto async-first en UTC−4 con solapamiento completo con el horario laboral de LATAM y EE. UU. Lidero revisiones de código y mentoreo a ingenieros mid y junior en patrones de Go, concurrencia y diseño de servicios mantenibles.",
+    reliability: "confiabilidad",
+    reliabilityTitle: "Grado de Auditoría Federal",
+    reliabilityDesc: "99.9% de disponibilidad en transacciones financieras del Estado en SIGEF 2 bajo ventanas de auditoría federal.",
+    stack: "stack",
+    stackTitle: "Full-Stack Backend-First",
+    stackDesc: "Microservicios en Go + Node.js con contratos Swagger/OpenAPI; React y Vue en el frontend.",
+    mentorship: "mentoría",
+    mentorshipTitle: "Mentor y Líder de Code Review",
+    mentorshipDesc: "Poseo los estándares de PR y mentoreo a ingenieros mid y junior en patrones de Go, concurrencia y diseño mantenible.",
+    uptime: "99.9% de disponibilidad",
+  },
+  footer: {
+    headline: "¿Listo para escalar tu producto?",
+    body: "Actualmente disponible para roles de consultoría y liderazgo técnico. Hablemos sobre cómo puedo aportar valor a tu equipo.",
+    rights: "Todos los derechos reservados.",
+  },
+};

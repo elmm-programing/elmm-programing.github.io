@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Frontend",
+    "items": [
+      "Vue 3",
+      "Nuxt 3",
+      "TypeScript",
+      "Tailwind",
+      "PrimeVue",
+      "React",
+      "Next.js",
+      "Angular",
+      "JavaScript (ES6+)",
+      "CSS3",
+      "Accesibilidad (WCAG)",
+      "Diseño Responsivo",
+      "HTML5"
+    ]
+  },
+  {
+    "name": "Backend",
+    "items": [
+      "Node.js",
+      "Java",
+      "Spring Boot",
+      "Go",
+      "C# / .NET",
+      "Python",
+      "Django",
+      "Ruby on Rails (familiar)",
+      "APIs RESTful",
+      "GraphQL",
+      "Arquitectura de Microservicios"
+    ]
+  },
+  {
+    "name": "Bases de Datos / DevOps",
+    "items": [
+      "PostgreSQL",
+      "Oracle",
+      "Docker",
+      "AWS",
+      "Azure (App Services, Pipelines)",
+      "CI/CD (GitHub Actions)",
+      "Vite",
+      "Webpack",
+      "DynamoDB",
+      "SQL",
+      "SOQL",
+      "Migraciones de Base de Datos",
+      "Diseño de Schema",
+      "Performance Tuning"
+    ]
+  },
+  {
+    "name": "Gestión de Estado y Data Fetching",
+    "items": [
+      "Redux Toolkit",
+      "React Query (TanStack)",
+      "Context API",
+      "BLoC / Cubit",
+      "NgRx",
+      "Vuex / Pinia"
+    ]
+  },
+  {
+    "name": "Móvil",
+    "items": [
+      "Flutter",
+      "Dart",
+      "Desarrollo Cross-Platform (iOS & Android)"
+    ]
+  },
+  {
+    "name": "Herramientas IA",
+    "items": [
+      "Cursor",
+      "Generación de Código con IA",
+      "Workflows Agénticos",
+      "Integración LLM",
+      "Prompt Engineering"
+    ]
+  },
+  {
+    "name": "Seguridad",
+    "items": [
+      "OAuth 2.0",
+      "JWT",
+      "HIPAA-Awareness",
+      "Seguridad de APIs",
+      "Validación de Datos"
+    ]
+  },
+  {
+    "name": "Flujo de Trabajo y Colaboración",
+    "items": [
+      "Agile / Scrum",
+      "Git",
+      "Code Reviews",
+      "Jira",
+      "Slack",
+      "Figma",
+      "Comunicación Async"
+    ]
+  }
+]

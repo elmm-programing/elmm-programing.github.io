@@ -17,8 +17,17 @@
             :href="'#' + link.id"
             :class="['font-mono text-sm transition-colors',
               activeSection === link.id ? 'text-primary border-b-2 border-primary' : 'text-ink-dark dark:text-ink-muted hover:text-primary']">
-            {{ link.label }}
+            {{ $t(link.labelKey) }}
           </a>
+          <span class="font-mono text-sm">
+            <button @click="setLocale('en')" type="button"
+              :class="['transition-colors', locale === 'en' ? 'text-primary' : 'text-ink-muted hover:text-primary']"
+              aria-label="English">EN</button>
+            <span class="text-ink-muted"> | </span>
+            <button @click="setLocale('es')" type="button"
+              :class="['transition-colors', locale === 'es' ? 'text-primary' : 'text-ink-muted hover:text-primary']"
+              aria-label="Español">ES</button>
+          </span>
           <button @click="toggleTheme" type="button"
             class="font-mono text-sm text-ink-dark dark:text-ink-muted hover:text-primary transition-colors px-2"
             :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
@@ -27,6 +36,15 @@
         </div>
 
         <div class="md:hidden flex items-center gap-3">
+          <span class="font-mono text-sm">
+            <button @click="setLocale('en')" type="button"
+              :class="['transition-colors', locale === 'en' ? 'text-primary' : 'text-ink-muted hover:text-primary']"
+              aria-label="English">EN</button>
+            <span class="text-ink-muted"> | </span>
+            <button @click="setLocale('es')" type="button"
+              :class="['transition-colors', locale === 'es' ? 'text-primary' : 'text-ink-muted hover:text-primary']"
+              aria-label="Español">ES</button>
+          </span>
           <button @click="toggleTheme" type="button"
             class="font-mono text-sm text-ink-dark dark:text-ink-muted hover:text-primary transition-colors"
             :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'">
@@ -46,7 +64,7 @@
           @click="isMenuOpen = false"
           :class="['block px-3 py-2 rounded-md font-mono text-base',
             activeSection === link.id ? 'text-primary bg-primary/10' : 'text-ink-dark dark:text-ink-muted hover:text-primary hover:bg-primary/5']">
-          {{ link.label }}
+          {{ $t(link.labelKey) }}
         </a>
       </div>
     </div>
@@ -54,15 +72,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, onMounted, onUnmounted, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { Menu } from 'lucide-vue-next';
 
+const { locale, t } = useI18n();
+
 const links = [
-  { id: 'work', label: 'case-studies' },
-  { id: 'skills', label: 'skills' },
-  { id: 'certifications', label: 'certs' },
-  { id: 'about', label: 'about' },
-  { id: 'contact', label: 'contact' },
+  { id: 'work', labelKey: 'nav.caseStudies' },
+  { id: 'skills', labelKey: 'nav.skills' },
+  { id: 'certifications', labelKey: 'nav.certs' },
+  { id: 'about', labelKey: 'nav.about' },
+  { id: 'contact', labelKey: 'nav.contact' },
 ];
 
 const isMenuOpen = ref(false);
@@ -78,12 +99,20 @@ function toggleTheme() {
   localStorage.setItem('theme', isDark.value ? 'dark' : 'light');
 }
 
+function setLocale(l: 'en' | 'es') {
+  locale.value = l;
+  try { localStorage.setItem('locale', l); } catch {}
+  document.documentElement.lang = l;
+}
+
 function onScroll() {
   scrolled.value = window.scrollY > 24;
 }
 
 onMounted(() => {
   isDark.value = document.documentElement.classList.contains('dark');
+  document.documentElement.lang = locale.value;
+  document.title = t('meta.title');
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
@@ -99,6 +128,11 @@ onMounted(() => {
     const el = document.getElementById(l.id);
     if (el) observer!.observe(el);
   });
+});
+
+watch(locale, (l) => {
+  document.documentElement.lang = l;
+  document.title = t('meta.title');
 });
 
 onUnmounted(() => {

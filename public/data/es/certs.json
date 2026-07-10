@@ -1,0 +1,50 @@
+[
+  {
+    "name": "SQL (Basic) Certificate",
+    "provider": "HackerRank",
+    "achievement": "SQL (Básico) — consultas simples, relaciones y agregadores.",
+    "url": "https://www.hackerrank.com/certificates/763bf8e777dd"
+  },
+  {
+    "name": "SQL (Intermediate) Certificate",
+    "provider": "HackerRank",
+    "achievement": "SQL (Intermedio) — joins complejos, unions y sub-consultas.",
+    "url": "https://www.hackerrank.com/certificates/78039edd80fd"
+  },
+  {
+    "name": "Go (Basic) Certificate",
+    "provider": "HackerRank",
+    "achievement": "Go (Básico) — características básicas del lenguaje, estructuras de datos simples, arrays, maps, tipos de datos e interfaces.",
+    "url": "https://www.hackerrank.com/certificates/2edf56ac37eb"
+  },
+  {
+    "name": "JavaScript (Basic) Certificate",
+    "provider": "HackerRank",
+    "achievement": "JavaScript (Básico) — Funciones, Currying, Hoisting, Scope, Herencia, Eventos y Manejo de Errores.",
+    "url": "https://www.hackerrank.com/certificates/1c375d187eeb"
+  },
+  {
+    "name": "JavaScript (Intermediate) Certificate",
+    "provider": "HackerRank",
+    "achievement": "JavaScript (Intermedio) — Design Patterns, gestión de memoria, modelo de concurrencia y event loops.",
+    "url": "https://www.hackerrank.com/certificates/a00313f5e469"
+  },
+  {
+    "name": "Master the Coding Interview: Data Structures + Algorithms",
+    "provider": "Zero To Mastery Academy",
+    "achievement": "Estructuras de Datos + Algoritmos",
+    "url": "https://media.licdn.com/dms/image/v2/D562DAQHwB4DYd_sX0w/profile-treasury-document-cover-images_800/profile-treasury-document-cover-images_800/0/1714874731806?e=1770228000&v=beta&t=gHAC0LxzCy_JPmBAwgp2UC8KdKDGr4daKYs2G7d1HJo"
+  },
+  {
+    "name": "Go Programming (Golang): The Complete Developer's Guide",
+    "provider": "Zero To Mastery Academy",
+    "achievement": "Go · Backend · Guía completa de desarrollador",
+    "url": "https://media.licdn.com/dms/image/v2/D562DAQHEiPK-n3EXNQ/profile-treasury-document-cover-images_800/profile-treasury-document-cover-images_800/0/1714874868685?e=1770228000&v=beta&t=7-4XCaxkxYZhKg-iXq4Wp5uK5p4K4zm2hy8_HDIxnoA"
+  },
+  {
+    "name": "Master the Coding Interview: System Design + Architecture",
+    "provider": "Zero To Mastery Academy",
+    "achievement": "Diseño de Sistemas + Arquitectura",
+    "url": "https://media.licdn.com/dms/image/v2/D562DAQG6TUWzb3b6Lw/profile-treasury-document-cover-images_800/profile-treasury-document-cover-images_800/0/1714875063696?e=1770228000&v=beta&t=5cl0ZPQ_QSDlzWBdjTFkAxRv9NCcAX6rZOXQjxZMq64"
+  }
+]

@@ -5,24 +5,31 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "node scripts/generate-data.js",
-    "build": "pnpm run prebuild && vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@notionhq/client": "^5.8.0",
     "@tailwindcss/vite": "^4.1.18",
     "lucide-vue-next": "^0.563.0",
-    "tailwindcss": "^4.1.18",
-    "vue": "^3.5.24"
+    "vue": "^3.5.24",
+    "vue-i18n": "^11.4.6"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
     "@types/node": "^24.10.1",
+    "@types/testing-library__jest-dom": "^5.14.9",
     "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/test-utils": "^2.2.0",
     "@vue/tsconfig": "^0.8.1",
-    "dotenv": "^17.2.3",
+    "eslint": "^9.0.0",
+    "jsdom": "^25.0.1",
+    "tailwindcss": "^4.1.18",
     "typescript": "~5.9.3",
-    "vite": "^7.2.4",
+    "vitest": "^3.1.1",
     "vue-tsc": "^3.1.4"
   }
 }

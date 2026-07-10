@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Frontend",
+    "items": [
+      "Vue 3",
+      "Nuxt 3",
+      "TypeScript",
+      "Tailwind",
+      "PrimeVue",
+      "React",
+      "Next.js",
+      "Angular",
+      "JavaScript (ES6+)",
+      "CSS3",
+      "Accessibility (WCAG)",
+      "Responsive Design",
+      "HTML5"
+    ]
+  },
+  {
+    "name": "Backend",
+    "items": [
+      "Node.js",
+      "Java",
+      "Spring Boot",
+      "Go",
+      "C# / .NET",
+      "Python",
+      "Django",
+      "Ruby on Rails (familiar)",
+      "RESTful APIs",
+      "GraphQL",
+      "Microservices Architecture"
+    ]
+  },
+  {
+    "name": "Databases / DevOps",
+    "items": [
+      "PostgreSQL",
+      "Oracle",
+      "Docker",
+      "AWS",
+      "Azure (App Services, Pipelines)",
+      "CI/CD (GitHub Actions)",
+      "Vite",
+      "Webpack",
+      "DynamoDB",
+      "SQL",
+      "SOQL",
+      "Database Migrations",
+      "Schema Design",
+      "Performance Tuning"
+    ]
+  },
+  {
+    "name": "State Management & Data Fetching",
+    "items": [
+      "Redux Toolkit",
+      "React Query (TanStack)",
+      "Context API",
+      "BLoC / Cubit",
+      "NgRx",
+      "Vuex / Pinia"
+    ]
+  },
+  {
+    "name": "Mobile",
+    "items": [
+      "Flutter",
+      "Dart",
+      "Cross-Platform Development (iOS & Android)"
+    ]
+  },
+  {
+    "name": "AI Tooling",
+    "items": [
+      "Cursor",
+      "AI-Powered Code Generation",
+      "Agentic Workflows",
+      "LLM Integration",
+      "Prompt Engineering"
+    ]
+  },
+  {
+    "name": "Security",
+    "items": [
+      "OAuth 2.0",
+      "JWT",
+      "HIPAA-Awareness",
+      "API Security",
+      "Data Validation"
+    ]
+  },
+  {
+    "name": "Workflow & Collaboration",
+    "items": [
+      "Agile / Scrum",
+      "Git",
+      "Code Reviews",
+      "Jira",
+      "Slack",
+      "Figma",
+      "Async Communication"
+    ]
+  }
+]

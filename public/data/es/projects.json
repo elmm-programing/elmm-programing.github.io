@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Modernización SIGEF 2",
+    "description": "Refactorización crítica del Sistema Nacional de Gestión Financiera.",
+    "challenge": "Modernizar un sistema financiero monolítico obsoleto manteniendo la integridad de datos transaccionales masivos.",
+    "solution": "Arquitectura modular con Nuxt 3 para gestión de estado global y optimización de renderizado.",
+    "impact": "Incremento del 30% en eficiencia de desarrollo y despliegues con cero tiempo de inactividad.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBbf1EbINAvQU3nbBTl7gp0K0Q73SzGjDhlD8GnJs0PBEXpdv_TgxBA8afL4Pa8WeFjdB0lR1u_VpHTQxTHDmTXDiet6C8FxUXAyatNVgDO_rBACGu6RfNjqRLcpug8-fZloWj-dyXEFEZVJSkD1oA3pklYgeWEvhkbGetTTVNDNevNi9qgqK-SQfUQnSFUc1RUeXmUwg6v4MJlFJMnnRQwQG1N7hy9NJ1WHJT4aJaCNvdD2u7k_JlHHVFB4NjCSPGnxmaEXj-ICArQ",
+    "tags": ["Nuxt 3", "Tailwind CSS", "Vue 3"]
+  },
+  {
+    "title": "Librería de Componentes UI",
+    "description": "Sistema de diseño unificado para una suite de productos financieros SaaS.",
+    "challenge": "Inconsistencia visual y de UX a través de múltiples módulos financieros independientes.",
+    "solution": "Creación de una librería atómica basada en PrimeVue extendida con tokens de diseño en Tailwind.",
+    "impact": "Reducción del 50% en tiempo de prototipado y consistencia visual en toda la plataforma SaaS.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAk5rXw8IsqkksrPsEMV-78gts9NBwg0kA2RZULVIj0Jq23SOYbcARI0PFgCkMm2_Eq5T8wLep6858_b5iIiKzy7e6dPqAdaxjWIpxTxvTecWOy_-rGJqdTTuFXHkvu9-V54YQ5GVtbTEVwe5Nsfa6RRYO1VEEgv4hALlsFMJ-fTadXu0K98n1kN4hTeEGjc8_8mqMWQmRwa7p7jZd1WGC9kS7dI_M49pOUU_IDUQaWqFw9UGo51lyTnDh3WW4cJIc2iu-omdxEhlZK",
+    "tags": ["PrimeVue", "SaaS", "Tailwind"]
+  },
+  {
+    "title": "Iron Graph — App de Tracking Fitness y Analítica",
+    "description": "Aplicación móvil Flutter production-grade para levantadores serios y atletas de fuerza. Logging detallado de entrenamientos, gestión de rutinas, tracking de records personales y analítica basada en datos mediante charts y heatmaps interactivos.",
+    "challenge": "Las apps de fitness del mercado o simplifican el tracking (sin datos granulares de sets/reps/peso) o abruman con complejidad. El desafío fue construir una app con analítica profunda — heatmaps de recuperación, volumen semanal vs. targets de hipertrofia, tendencias de progresión y detección de PRs — manteniendo el logging de entrenamientos rápido y sin fricción. Además, la app debía funcionar offline, persistir entrenamientos activos tras cierres de app, manejar agregación compleja eficientemente (queries single-pass sobre miles de sets) y entregar un UX pulido con animaciones y haptic feedback en layout mobile-first responsive.",
+    "solution": "Arquitectura Flutter feature-based con separación limpia: DAOs para encapsulación de datos, modelos Freezed para inmutabilidad, y providers Riverpod para state management reactivo. Implementé Drift/SQLite con 8 versiones de migración de schema para una base de datos local-first robusta seeded con 250+ ejercicios de hipertrofia. Construí un sistema de entrenamiento activo en tiempo real que persiste estado a SharedPreferences y se recupera seamless al reiniciar. Creé un dashboard de analítica multi-chart usando fl_chart (bar, line, donut, heatmaps) powered by single-pass join queries. Añadí un rest timer animado con ring depletable, transiciones de color y vibration feedback. Diseñé layout responsive mobile (bottom nav) y tablet (navigation rail) con transiciones de tab fading custom.",
+    "impact": "App fitness fully funcional y offline-capable con 7+ pantallas, 4 tipos de charts analíticos, 22,000+ ejercicios y un ciclo de vida completo de entrenamiento (crear rutina → log sets → ver resumen → track PRs → analizar tendencias). Optimizaciones de performance (KeepAlive tabs, RepaintBoundary en charts, lazy queries, debounced search) aseguran interacciones smooth a 60fps incluso con datasets grandes.",
+    "image": "https://elmm-programing.github.io/images/TrainingAppImage.jpeg",
+    "tags": ["Custom Animations", "Dart", "Data Visualization", "Drift/SQLite", "Flutter", "Material Design 3", "Mobile Development", "Offline-First", "Riverpod", "State Management", "UI/UX Design"]
+  }
+]

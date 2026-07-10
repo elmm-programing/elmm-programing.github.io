@@ -3,9 +3,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 class="text-3xl font-bold text-white mb-4">Ready to scale your product?</h2>
+          <h2 class="text-3xl font-bold text-white mb-4">{{ $t('footer.headline') }}</h2>
           <p class="text-ink-muted mb-8 max-w-md">
-            Currently available for consulting and technical leadership roles. Let's talk about how I can bring value to your team.
+            {{ $t('footer.body') }}
           </p>
           <div class="flex flex-col gap-3 font-mono text-sm">
             <a :href="'mailto:elmm.programing@gmail.com'" class="flex items-center gap-2 text-ink-muted hover:text-primary transition-colors">
@@ -35,7 +35,7 @@
               </svg>
             </a>
           </div>
-          <p class="font-mono text-sm text-ink-muted">© {{ year }} Edwin Levinson. All rights reserved.</p>
+          <p class="font-mono text-sm text-ink-muted">© {{ year }} Edwin Levinson. {{ $t('footer.rights') }}</p>
         </div>
       </div>
     </div>

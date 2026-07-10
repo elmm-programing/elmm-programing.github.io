@@ -1,0 +1,29 @@
+[
+  {
+    "title": "SIGEF 2 Modernization",
+    "description": "Critical refactoring of the National Financial Management System.",
+    "challenge": "Modernize an obsolete monolithic financial system while maintaining the integrity of massive transactional data.",
+    "solution": "Modular architecture with Nuxt 3 for global state management and rendering optimization.",
+    "impact": "30% increase in development and deployment efficiency with zero downtime.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBbf1EbINAvQU3nbBTl7gp0K0Q73SzGjDhlD8GnJs0PBEXpdv_TgxBA8afL4Pa8WeFjdB0lR1u_VpHTQxTHDmTXDiet6C8FxUXAyatNVgDO_rBACGu6RfNjqRLcpug8-fZloWj-dyXEFEZVJSkD1oA3pklYgeWEvhkbGetTTVNDNevNi9qgqK-SQfUQnSFUc1RUeXmUwg6v4MJlFJMnnRQwQG1N7hy9NJ1WHJT4aJaCNvdD2u7k_JlHHVFB4NjCSPGnxmaEXj-ICArQ",
+    "tags": ["Nuxt 3", "Tailwind CSS", "Vue 3"]
+  },
+  {
+    "title": "UI Component Library",
+    "description": "Unified design system for a SaaS financial products suite.",
+    "challenge": "Visual and UX inconsistency across multiple independent financial modules.",
+    "solution": "Creation of an atomic library based on PrimeVue extended with design tokens in Tailwind.",
+    "impact": "50% reduction in prototyping time and visual consistency across the entire SaaS platform.",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAk5rXw8IsqkksrPsEMV-78gts9NBwg0kA2RZULVIj0Jq23SOYbcARI0PFgCkMm2_Eq5T8wLep6858_b5iIiKzy7e6dPqAdaxjWIpxTxvTecWOy_-rGJqdTTuFXHkvu9-V54YQ5GVtbTEVwe5Nsfa6RRYO1VEEgv4hALlsFMJ-fTadXu0K98n1kN4hTeEGjc8_8mqMWQmRwa7p7jZd1WGC9kS7dI_M49pOUU_IDUQaWqFw9UGo51lyTnDh3WW4cJIc2iu-omdxEhlZK",
+    "tags": ["PrimeVue", "SaaS", "Tailwind"]
+  },
+  {
+    "title": "Iron Graph — Fitness Tracking & Analytics App",
+    "description": "Production-grade Flutter mobile application for serious lifters and strength athletes. Detailed workout logging, routine management, personal record tracking, and data-driven analytics through interactive charts and heatmaps.",
+    "challenge": "Fitness apps on the market either oversimplify tracking (missing granular set/rep/weight data) or overwhelm users with complexity. The challenge was building an app that provides deep analytics — recovery heatmaps, weekly volume vs. hypertrophy targets, progression trends, and PR detection — while keeping the workout logging experience fast and frictionless. Additionally, the app needed to work fully offline, persist active workouts across app kills, handle complex data aggregation efficiently (single-pass queries across thousands of sets), and deliver a polished UX with animations and haptic feedback on a mobile-first responsive layout.",
+    "solution": "Feature-based Flutter architecture with clean separation: DAOs for data encapsulation, Freezed models for immutability, and Riverpod providers for reactive state management. Implemented Drift/SQLite with 8 schema migration versions for a robust local-first database seeded with 250+ hypertrophy exercises. Built a real-time active workout system that persists state to SharedPreferences and recovers seamlessly on restart. Created a multi-chart analytics dashboard using fl_chart (bar, line, donut, heatmaps) powered by single-pass join queries. Added an animated rest timer with a depleting ring animation, color transitions, and vibration feedback. Designed a responsive layout supporting mobile (bottom nav) and tablet (navigation rail) with custom fading tab transitions.",
+    "impact": "Fully functional, offline-capable fitness app with 7+ screens, 4 analytics chart types, 22,000+ exercises, and a complete workout lifecycle (create routine → log sets → view summary → track PRs → analyze trends). Performance optimizations (KeepAlive tabs, RepaintBoundary on charts, lazy queries, debounced search) ensure smooth 60fps interactions even with large datasets.",
+    "image": "https://elmm-programing.github.io/images/TrainingAppImage.jpeg",
+    "tags": ["Custom Animations", "Dart", "Data Visualization", "Drift/SQLite", "Flutter", "Material Design 3", "Mobile Development", "Offline-First", "Riverpod", "State Management", "UI/UX Design"]
+  }
+]
