@@ -68,14 +68,14 @@ const iconMap: Record<string, any> = {
 };
 
 const colorMap: Record<string, string> = {
-  'Frontend': 'oklch(0.78 0.18 145)',
-  'Backend': 'oklch(0.82 0.15 75)',
-  'Databases / DevOps': 'oklch(0.72 0.15 250)',
-  'State Management & Data Fetching': 'oklch(0.75 0.15 25)',
-  'Mobile': 'oklch(0.70 0.18 310)',
-  'AI Tooling': 'oklch(0.75 0.18 200)',
-  'Security': 'oklch(0.65 0.20 25)',
-  'Workflow & Collaboration': 'oklch(0.72 0.15 180)',
+  'Frontend': 'var(--color-cat-frontend)',
+  'Backend': 'var(--color-cat-backend)',
+  'Databases / DevOps': 'var(--color-cat-dbdevops)',
+  'State Management & Data Fetching': 'var(--color-cat-state)',
+  'Mobile': 'var(--color-cat-mobile)',
+  'AI Tooling': 'var(--color-cat-ai)',
+  'Security': 'var(--color-cat-security)',
+  'Workflow & Collaboration': 'var(--color-cat-workflow)',
 };
 
 function getCategoryIcon(name: string) {
@@ -83,6 +83,6 @@ function getCategoryIcon(name: string) {
 }
 
 function getCategoryColor(name: string) {
-  return colorMap[name] || 'oklch(0.72 0.02 160)';
+  return colorMap[name] || 'var(--color-ink-muted)';
 }
 </script>

@@ -62,7 +62,7 @@
               <h4 class="font-mono text-xs text-primary mb-2 flex items-center gap-1">
                 <TrendingUp class="w-3.5 h-3.5" /> &gt; impact
               </h4>
-              <p class="text-sm text-ink dark:text-ink leading-relaxed font-medium">
+              <p class="text-sm text-ink-dark dark:text-ink leading-relaxed font-medium">
                 {{ project.impact }}
               </p>
             </div>
